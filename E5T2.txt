@@ -1,0 +1,31 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+Aqua and tfsec => https://github.com/aquasecurity/tfsec
+
+TFLint => https://github.com/terraform-linters/tflint
+
+Terrafirm => https://github.com/wayfair/terrafirma
+
+### Example vulnerability
+
+- Security group allows open ingress
+- Hard coded secrets in EC2 metadata
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+- Clair (dynamic scanning)
+- Amazon Inspector
+
+### Example vulnerability
+
+Port 22 is reachable from an Internet Gateway
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- AWS Config
+
+
+### Example vulnerability
+
+s3-bucket-level-public-access-prohibited - Checks if Amazon Simple Storage Service (Amazon S3) buckets are publicly accessible.

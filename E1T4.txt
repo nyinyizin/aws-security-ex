@@ -1,0 +1,21 @@
+# Text file identifying 2 poor security practices with justification.
+
+
+# 1 - Poor Security Practice for Web Service Instance
+
+WebAppSG security group allows traffic from any IP and any Ports without any restriction. That's lead to the wide open for attackers.
+WebAppSG security group should only allows the traffic from the load balancer only.
+And WebAppSG outbound rules should be updated to limit the internet access using NAT Gatway 
+or create vpc endpoint to consume S3 resources rather than going through via internet.
+We Service Instance should be moved to Private Subnet and Application Load Balancer will act as Bastin Host.
+IAM role for instace is unrestricted and it's currently allowed all the permissions and repository in S3
+
+
+
+# 2 - Poor Security Practice for S3
+
+Public access for both buckets has enabled.
+IAM role with limited access should be there for both buckets.
+And limit the access of buckets.
+Web Service Instace's IAM role should only access Free Recipes bucket with limited permissions
+

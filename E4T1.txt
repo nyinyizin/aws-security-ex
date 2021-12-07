@@ -1,0 +1,9 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+1# Disabled the password login for Web Service Instance. Only allow key based login
+2# Moved the Web Service Instance to Private subnet and block the ports and unnecessary incoming flows.
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+1# Create a least priviledge role for Web Service Instance.
+2# Only "Priviledge Business Users" IAM user group should only have access to Secrete Recipe Vault bucket.

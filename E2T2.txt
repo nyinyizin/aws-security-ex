@@ -1,0 +1,12 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+- Inbound and outbound rules for security groups are incorrect.
+- Restrict the ports that are not in use, port 80 to Load Balancer and 5000 for Web Service Instance
+- Encryption in S3 buckets
+- Restrict the public access of S3 buckets, all IAM user or Role should limit access to their respective repo only
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Access EC2 instances via AWS System Manager rather than via SSH with key in local or other machines.
+- Encrypt EC2 volumnes
+- VPC flow logs should be logged.
+- Logged the S3 bucket access 
